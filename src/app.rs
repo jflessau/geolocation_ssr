@@ -38,6 +38,7 @@ fn LocateUser() -> impl IntoView {
         if let Some(prev_handle) = prev_handle {
             prev_handle.clear();
         };
+        let UseGeolocationReturn { coords, error, .. } = use_geolocation();
 
         log::info!("run effect");
 
@@ -46,7 +47,6 @@ fn LocateUser() -> impl IntoView {
             log::info!("window is some: {:?}", window.is_some()); // logs "window is some: false" to browser console
 
             log::info!("run locate");
-            let UseGeolocationReturn { coords, error, .. } = use_geolocation();
             if let Some(coords) = coords.get() {
                 log::info!(
                     "lat: {:?}, long: {:?}",
