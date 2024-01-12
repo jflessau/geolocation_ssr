@@ -1,0 +1,40 @@
+html,
+main {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: monospace;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  display: block;
+}
+
+a,
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+img,
+body,
+main,
+input,
+form,
+html {
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
